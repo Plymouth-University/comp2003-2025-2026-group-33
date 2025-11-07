@@ -1,0 +1,45 @@
+**Project:** Rebuilding of TypeScript Webpage to a Modern Modular System  
+**Module:** COMP2003 – Rebuilding TypeScript  
+**Team:** Group 33  
+**Duration:** 17:00 – 23:00  
+
+---
+
+## 🎯 Objective
+Continue Sprint 1 setup and complete the documentation and analysis phase.  
+Ensure the GitHub repository, Trello board, and design documents are fully structured and aligned with COMP2003 Sprint 1 goals.  
+Lay the groundwork for the team to begin development confidently in Sprint 2.
+
+---
+
+## 🍀 Tasks Completed
+| Task | Description | Status |
+|------|--------------|--------|
+| **Meeting Documentation** | Created and formatted detailed meeting files (`Client Kick-off – 28 Oct 2025` and `Tutor Meeting – 5 Nov 2025`) following unified markdown structure. | ✅ |
+| **Minutes Folder Setup** | Organised `/Design Documents/Minutes/` folder with `MeetingIndex.md` for chronological tracking. | ✅ |
+| **Trello Board Improvements** | Added Agile Board Guide card, colour-coded sprints, and confirmed Sprint 1–3 lists with team roles and assignments. | ✅ |
+| **Sprint Plan PDF** | Generated and uploaded `SprintPlan_Group33.pdf` with full Semester 1–2 schedule and objectives. | ✅ |
+| **Legacy Site Review** | Analysed legacy client website from the `/legacy-site` folder and noted system structure, issues, and improvement areas. | ✅ |
+| **Tech Stack Decision** | Evaluated frameworks and confirmed **React + TypeScript** as final stack for rebuild. Created `TechStackDecision.md`. | ✅ |
+| **System Overview Document** | Wrote `SystemOverview.md` outlining architecture, data flow, and rebuild plan using modular Next.js structure. | ✅ |
+| **Component Mapping** | Completed `ComponentMapping.md`, mapping all existing pages and components from legacy system to new planned structure. | ✅ |
+| **Legacy Analysis Document** | Wrote `LegacyAnalysis.md` detailing strengths, weaknesses, and required improvements in the old system. | ✅ |
+| **Uploaded Design Documents** | Added all key Sprint 1 markdowns (`LegacyAnalysis.md`, `ComponentMapping.md`, `SystemOverview.md`, `TechStackDecision.md`) to `/Design Documents/`. | ✅ |
+| **Informed Team** | Posted full update summarising Sprint 1 progress, documents completed, and next steps for Sprint 2. | ✅ |
+| **Daily Log** | Documented all progress and updates from this session. | ✅ |
+
+---
+
+## 🧠 Notes
+- All core Sprint 1 documentation is now complete.  
+- Repository and Trello are fully structured and synced.  
+- Legacy site confirmed as **Next.js + TypeScript + TailwindCSS**, requiring modernisation but not a language change.  
+- Team is now prepared to start development in Sprint 2.  
+
+---
+
+## 🎯 Next Steps
+- Finalise and upload the following before Sprint 1 closure:
+  - `RiskAssessment.md`  
+  - `KPIs.md`  
+  - `EvidenceLog.md`
