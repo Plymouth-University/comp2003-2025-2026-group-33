@@ -1,0 +1,26 @@
+📅 Sprint Meeting – Monday (4:00pm–7:00pm)
+
+Module: COMP2003 – Rebuilding TypeScript
+Team: Group 33
+Attendees: Dylan, Maksym
+Date: Monday (Sprint 1)
+Duration: 4:00pm–7:00pm
+
+🎯 Objective
+
+Get a better understanding of the project by reviewing the legacy client system and rebuilding the modern folder structure that will support development throughout the rest of Sprint 2.
+
+🍀 Tasks Completed
+
+✅ Folder Structure Rebuild	Recreated a clean, modular folder architecture for the new Next.js system (app/, components/, api/, etc.). Ensured consistency across both developer environments.	
+✅ Legacy Client System Review	Studied the old client project structure, including routing, components, and styling. Identified outdated patterns and documented required modernisation.	
+✅ Mapping Old → New Architecture	Compared the legacy layout to the planned modern structure and mapped how each page and component will be reconstructed.
+✅ Environment Preparation	Synced updated folder structure across the repository and confirmed aligned development environments.	
+✅ Daily Log	Documented all progress and key outcomes from this working session.	
+
+🧠 Notes
+
+The legacy system’s file structure was non-modular and will require full restructuring.
+Both developers now have a shared understanding of the old system’s architecture.
+The new folder layout is finalised and ready for Sprint 2 implementation.
+Several legacy components can be reused conceptually but all require modernisation.
