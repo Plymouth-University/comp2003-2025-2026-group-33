@@ -18,7 +18,7 @@ export function Navbar({
     <header className="w-full border-b bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <div className="font-montserrat text-xl font-extrabold">
-          ENIDIA
+          ENGAME
         </div>
         <div className="hidden gap-4 md:flex">
           <button onClick={onClickLogin} className="text-sm underline">

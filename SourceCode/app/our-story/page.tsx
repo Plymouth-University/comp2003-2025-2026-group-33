@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Section } from "@/components/layout/Section";
 import { Slideshow } from "@/components/marketing/Slideshow";
 import { SlideshowItem } from "@/components/marketing/SlideshowItem";
-import { PartnerContent } from "@/components/marketing/PartnerContent";
+import { TrustedCompanies } from "@/components/marketing/TrustedCompanies";
 import { Button } from "@/components/ui/Button";
 
 export default function OurStoryPage() {
@@ -63,7 +63,7 @@ export default function OurStoryPage() {
           </p>
           <p className="text-center font-montserrat font-semibold text-2xl">
             The adventure of{" "}
-            <span className="font-extrabold">ENIDIA</span> started in 2018 with
+            <span className="font-extrabold">ENGAME</span> started in 2018 with
             a bunch of passionate developers and artists.
           </p>
         </div>
@@ -75,27 +75,27 @@ export default function OurStoryPage() {
           {
             title: "2018 – Game Start!",
             desc:
-              "The beginning of every story is often so unremarkable. ENIDIA is the same. Founded in 2018, ENIDIA didn’t have deep funds or a huge team to start, but we upheld a concept: grow a studio where creative people from all around the world can gather.",
+              "The beginning of every story is often so unremarkable. Engame is the same. Founded on 8 Jan 2018, Engame doesn't have deep funds or a huge team to start, but we uphold a concept, which is to grow our studio to a place where creative game people from all around the world can gather, an international game. With this concept, we developed the Tap Master platform, and the game, Watafood, also our first Voucher Claiming Game has become the prototype of our future Play-to-Earn model.",
           },
           {
             title: "2019 - First Stage Clear!",
             desc:
-              "It took us a year to determine our future direction. We decided to use gaming as a medium to connect businesses with their target customers and began integrating voucher-based engagement into our platform.",
+              "It took us a year to determine our future direction. We decided to avail gaming as a medium to connect businesses with their target customers. Therefore, we began to integrate the Voucher Claiming model into our Tap Master Platform, hoping to benefit more enterprises through this model. Years of hard work finally allowed us to achieve unprecedented success and honored to win the MDEC DiCE 2019 (Digital Content Creation Challenge 2019). Shortly after winning the MDEC DiCE 2019, we were contacted by Maxis, one of the major telecommunications corporations in Malaysia to participate in their upcoming Startup Challenge in November; we took it in a heartbeat and proceed to go through their submission and screening process; after a couple of weeks, they informed us with a piece of intriguing news, Endgame is chosen to be one of the top 100 startups in Malaysia by Maxis, we were also been given an opportunity to showcase our solution in their Maxis Market Access Day in December.",
           },
           {
             title: "2020 - Buffed!",
             desc:
-              "With new funding, our platform gained popularity as a corporate customised solution. We enhanced performance, refreshed artwork and started working with larger brands.",
+              "With the funding from MDEC, Tap Master is gaining popularity as a corporate customized solution platform. The adequate funding has allowed us to make leaps in technological development, not only enhancing the performance of the game, but also allowing us to rebrand the artwork to a realm that is more in line with market demand. With the development of the platform, we have also successfully received cooperation invitations from Texas and Tealive, everything is developing for the better, and the tacit understanding between the teams is becoming more and more mature. In December of the same year, we had another partner on our journey, we welcomed Ms. Jasmine officially joined Engame and enjoyed the game together.",
           },
           {
             title: "2021 - New Area Found!",
             desc:
-              "We refined our concept into Game as a Service and expanded our ambitions to work with more partners and markets.",
+              "Under the mentorship of Jasmine, we have reformed our concept to a more comprehensive level, and the concept of Game as a Service was born. In the same year, our platform was also favored by the Founder of Hermo and became our strategic partner with plans to enter the markets of United States Singapore, India, Philippines and Japan in the year 2022.",
           },
           {
             title: "2022 - Our Next Stage!",
             desc:
-              "We were ready to launch more games and deepen our analytics capabilities to help companies capture and understand their audiences.",
+              "Our team is extremely excited about the arrival of 2022 as we will be launching 5 new games during the year! The accumulated experience allows us to enhance the platform with the data analytics technologies, allowing the companies can accurately capture their target users. In addition, we will officially launch our Tap Master on the iOS platform, and will also relaunch it on the Android platform to provide the immersive experience to both companies and also the gamers.",
           },
         ].map((item, k) => {
           const even = k % 2 === 0;
@@ -155,14 +155,14 @@ export default function OurStoryPage() {
             </p>
             <ol className="list-decimal pl-4 font-montserrat font-semibold text-sm xl:text-base space-y-2">
               <li>
-                Pioneer in gamification-as-a-service for brands and businesses.
+                Pioneer in offering Games as a Service - Tap Master to brands & businesses such as Tealive, Fave, Mydin and Herbalife
               </li>
-              <li>Recognised as a commercial-ready game solution.</li>
+              <li>Commercial Ready Game Winner of MDEC DiCE</li>
               <li>
-                Selected among top startups in regional programmes and showcases.
+                The only game studio selected by Maxis as one of the Top 100 startups in Maxis Market Access Day
               </li>
               <li>
-                Also developing our own game projects to push creativity further.
+                Also developing on our own game “Rogue Planet”, scheduled to be launch in 5 years
               </li>
             </ol>
           </div>
@@ -360,8 +360,8 @@ export default function OurStoryPage() {
         </div>
       </Section>
 
-      {/* Partner logos section */}
-      <PartnerContent backgroundImage />
+      {/* TrustedCompanies section */}
+       <TrustedCompanies />
 
       {/* Final CTA */}
       <div

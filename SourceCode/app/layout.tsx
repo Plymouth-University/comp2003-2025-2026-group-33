@@ -5,8 +5,8 @@ import { ModalProvider } from "@/context/ModalContext";
 import { AppShell } from "@/components/layout/AppShell";
 
 export const metadata = {
-  title: "ENIDIA",
-  description: "Rebuilt ENIDIA marketing website",
+  title: "ENGAME",
+  description: "Rebuilt ENGAME marketing website",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
