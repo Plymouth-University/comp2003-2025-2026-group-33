@@ -179,125 +179,219 @@ export default function OurStoryPage() {
         </div>
       </Section>
 
-      {/* Strategic Plan - with simple slider */}
+      {/* Strategic Plan */}
       <div
-        style={{
-          backgroundImage:
-            "url('/assets/images/backgrounds/EG---bg-2.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-        className="relative"
-      >
-        <Section zIndex="z-30" bgColor="bg-transparent">
-          <p className="py-10 font-montserrat font-extrabold text-4xl text-center capitalize">
-            <span className="underline underline-yellow">Strategic Plan</span>{" "}
-            That Defines A Goal Or Desired Outcome And Includes The Major Steps
-            Or Milestones Needed To Reach It.
-          </p>
-        </Section>
+  style={{
+    backgroundImage: "url('/assets/images/backgrounds/EG---bg-2.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+  className="w-full relative"
+>
+  {/* inner wrapper so the background extends nicely with padding */}
+  <div className="py-20">
+    {/* Heading */}
+    <Section zIndex="z-30" bgColor="bg-transparent">
+      <p className="py-10 font-montserrat font-extrabold text-3xl md:text-4xl lg:text-5xl text-center leading-snug">
+        <span className="underline underline-yellow">Strategic Plan</span>{" "}
+        That Defines A Goal Or Desired Outcome And Includes The Major Steps Or
+        Milestones Needed To Reach It.
+      </p>
+    </Section>
 
-        <Section bgColor="bg-transparent">
-          <div className="flex flex-col space-y-10 pb-12">
-            {/* Year buttons */}
-            <div className="w-full flex flex-row overflow-auto space-x-2 justify-center z-10">
-              {["2021", "2022", "2023"].map((label, idx) => (
-                <button
-                  key={label}
-                  onClick={() => paginate(idx)}
-                  className={
-                    "px-4 py-1 rounded font-montserrat font-bold text-2xl" +
-                    (page === idx
-                      ? " bg-yellow-400"
-                      : " hover:bg-yellow-300 bg-white/80")
-                  }
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+    <Section bgColor="bg-transparent">
+      <div className="flex flex-col space-y-10">
+        {/* YEAR TABS */}
+        <div className="w-full flex flex-row overflow-auto space-x-2 justify-center z-10">
+          {["2021", "2022", "2023"].map((label, idx) => (
+            <button
+              key={label}
+              onClick={() => paginate(idx)}
+              className={
+                "px-6 py-2 rounded font-montserrat font-bold text-xl md:text-2xl" +
+                (page === idx
+                  ? " bg-yellow-400 text-black"
+                  : " bg-yellow-200 hover:bg-yellow-300 text-black")
+              }
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
-            {/* Slides */}
-            <div className="flex flex-col border-b">
-              <Slideshow activeKey={page} direction={direction} page={page}>
-                {/* 2021 */}
-                <SlideshowItem>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div className="flex justify-center items-center">
-                      <img
-                        src="/assets/images/our-story/EG---Landing-ourstory_milestone-2(D).png"
-                        width={800}
-                        height={800}
-                        alt="strategic-plan-2021"
-                      />
+        {/* SLIDES */}
+        <div className="flex flex-col border-b border-yellow-300 pb-14">
+          <Slideshow activeKey={page} direction={direction} page={page}>
+            {/* 2021 */}
+            <SlideshowItem>
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-10 items-center">
+                {/* left image */}
+                <div className="flex justify-center">
+                  <img
+                    src="/assets/images/our-story/EG---Landing-ourstory_milestone-2(D).png"
+                    width={800}
+                    height={800}
+                    alt="Strategic plan 2021"
+                    className="max-w-xs md:max-w-sm lg:max-w-md"
+                  />
+                </div>
+
+                {/* right content */}
+                <div className="flex flex-col space-y-8">
+                  {/* Q1 */}
+                  <div className="flex flex-row">
+                    <div className="flex flex-col items-center mr-6">
+                      <div className="h-5 w-5 rounded-full border-4 border-yellow-300" />
+                      <div className="flex-1 w-[2px] bg-yellow-300" />
                     </div>
-                    <div className="space-y-6">
-                      <p className="font-montserrat font-extrabold text-3xl">
-                        2021 – Platform & Merchant Features
+                    <div className="space-y-3">
+                      <p className="font-montserrat font-extrabold text-2xl md:text-3xl">
+                        Q1
                       </p>
-                      <ul className="list-disc pl-4 font-lato text-lg space-y-2">
-                        <li>Self-serve merchant templates and voucher setup.</li>
-                        <li>Competition and leaderboard configuration.</li>
-                        <li>Social media integration for campaigns.</li>
-                      </ul>
+                      <p className="font-montserrat font-bold text-xl">
+                        New Merchant&apos;s Features
+                      </p>
+                      <ol className="list-decimal pl-5 space-y-1 font-lato text-lg">
+                        <li>
+                          Enhancement merchants&apos; template voucher – self-serve
+                          customisable feature.
+                        </li>
+                        <li>
+                          Complete merchants&apos; enablement for self-serve
+                          competition-leaderboard setup.
+                        </li>
+                        <li>Social media integration.</li>
+                      </ol>
                     </div>
                   </div>
-                </SlideshowItem>
 
-                {/* 2022 */}
-                <SlideshowItem>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div className="flex justify-center items-center">
-                      <img
-                        src="/assets/images/our-story/EG---Landing-ourstory_milestone-2(D).png"
-                        width={800}
-                        height={800}
-                        alt="strategic-plan-2022"
-                      />
+                  {/* Q2 */}
+                  <div className="flex flex-row">
+                    <div className="flex flex-col items-center mr-6">
+                      <div className="h-5 w-5 rounded-full border-4 border-yellow-500" />
+                      <div className="flex-1 w-[2px] bg-yellow-500" />
                     </div>
-                    <div className="space-y-6">
-                      <p className="font-montserrat font-extrabold text-3xl">
-                        2022 – Reach & Analytics
+                    <div className="space-y-3">
+                      <p className="font-montserrat font-extrabold text-2xl md:text-3xl">
+                        Q2
                       </p>
-                      <ul className="list-disc pl-4 font-lato text-lg space-y-2">
-                        <li>In-game advertising and bidding capabilities.</li>
-                        <li>Geo-location powered campaigns.</li>
-                        <li>Broader platform releases across devices.</li>
-                      </ul>
+                      <p className="font-montserrat font-bold text-xl">
+                        New Merchant&apos;s Features
+                      </p>
+                      <ol className="list-decimal pl-5 space-y-1 font-lato text-lg">
+                        <li>In-game advertising bidding system.</li>
+                        <li>In-built geo-location capabilities.</li>
+                      </ol>
+
+                      <p className="font-montserrat font-bold text-xl pt-4">
+                        New Game Features
+                      </p>
+                      <ol className="list-decimal pl-5 space-y-1 font-lato text-lg">
+                        <li>iOS Release.</li>
+                      </ol>
                     </div>
                   </div>
-                </SlideshowItem>
+                </div>
+              </div>
+            </SlideshowItem>
 
-                {/* 2023 */}
-                <SlideshowItem>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div className="flex justify-center items-center">
-                      <img
-                        src="/assets/images/our-story/EG---Landing-ourstory_milestone-2(D).png"
-                        width={800}
-                        height={800}
-                        alt="strategic-plan-2023"
-                      />
+            {/* 2022 */}
+            <SlideshowItem>
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-10 items-center">
+                <div className="flex justify-center">
+                  <img
+                    src="/assets/images/our-story/EG---Landing-ourstory_milestone-2(D).png"
+                    width={800}
+                    height={800}
+                    alt="Strategic plan 2022"
+                    className="max-w-xs md:max-w-sm lg:max-w-md"
+                  />
+                </div>
+                <div className="flex flex-col space-y-8">
+                  {/* 2022 */}
+                  <div className="flex flex-row">
+                    <div className="flex flex-col items-center mr-6">
+                      <div className="h-5 w-5 rounded-full border-4 border-yellow-300" />
+                      <div className="flex-1 w-[2px] bg-yellow-300" />
                     </div>
-                    <div className="space-y-6">
-                      <p className="font-montserrat font-extrabold text-3xl">
-                        2023 – Deeper Engagement
+                    <div className="space-y-3">
+                      <p className="font-montserrat font-extrabold text-2xl md:text-3xl">
+                        Q1
                       </p>
-                      <ul className="list-disc pl-4 font-lato text-lg space-y-2">
-                        <li>Stronger analytics dashboards.</li>
-                        <li>More game experiences on the platform.</li>
-                        <li>Expansion into new regions and partners.</li>
-                      </ul>
+                      <p className="font-montserrat font-bold text-xl">
+                        New Merchant&apos;s Features
+                      </p>
+                      <ol className="list-decimal pl-5 space-y-1 font-lato text-lg">
+                        <li>Enhancement Merchants' template voucher – self-serve customizable feature</li>
+                        <li>Complete merchants' enablement for self-serve competition-leaderboard setup</li>
+                        <li>Social media integration</li>
+                      </ol>
                     </div>
                   </div>
-                </SlideshowItem>
-              </Slideshow>
-            </div>
-          </div>
-        </Section>
+                </div>
+              </div>
+            </SlideshowItem>
+
+            {/* 2023 */}
+            <SlideshowItem>
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-10 items-center">
+                <div className="flex justify-center">
+                  <img
+                    src="/assets/images/our-story/EG---Landing-ourstory_milestone-2(D).png"
+                    width={800}
+                    height={800}
+                    alt="Strategic plan 2023"
+                    className="max-w-xs md:max-w-sm lg:max-w-md"
+                  />
+                </div>
+                <div className="flex flex-col space-y-8">
+                  {/* 2023 */}
+                  <div className="flex flex-row">
+                    <div className="flex flex-col items-center mr-6">
+                      <div className="h-5 w-5 rounded-full border-4 border-yellow-300" />
+                      <div className="flex-1 w-[2px] bg-yellow-300" />
+                    </div>
+                    <div className="space-y-3">
+                      <p className="font-montserrat font-extrabold text-2xl md:text-3xl">
+                        Q1
+                      </p>
+                      <p className="font-montserrat font-bold text-xl">
+                        New Merchant&apos;s Features
+                      </p>
+                      <ol className="list-decimal pl-5 space-y-1 font-lato text-lg">
+                        <li>In game advertising bidding system</li>
+                        <li>In built geo-location capabilities</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row">
+                    <div className="flex flex-col items-center mr-6">
+                      <div className="h-5 w-5 rounded-full border-4 border-yellow-500" />
+                      <div className="flex-1 w-[2px] bg-yellow-500" />
+                    </div>
+                    <div className="space-y-3">
+                      <p className="font-montserrat font-extrabold text-2xl md:text-3xl">
+                        Q2
+                      </p>
+                      <p className="font-montserrat font-bold text-xl">
+                        New Game / Platform Features
+                      </p>
+                      <ol className="list-decimal pl-5 space-y-1 font-lato text-lg">
+                        <li>iOS Release</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SlideshowItem>
+          </Slideshow>
+        </div>
       </div>
-
+    </Section>
+  </div>
+</div>
       {/* Core Team */}
       <Section>
         <div className="py-10 space-y-10">
