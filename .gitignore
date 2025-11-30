@@ -40,9 +40,3 @@ pnpm-debug.log*
 # misc
 *.swp
 *.tmp
-<<<<<<< HEAD
-
-# Do NOT ignore public assets
-!public/
-=======
->>>>>>> b264c9850daf59ff5298901f8aa63625dd49a9cc
