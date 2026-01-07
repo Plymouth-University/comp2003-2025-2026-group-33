@@ -1,20 +1,14 @@
 // app/page.tsx
-import { Hero } from "@/components/marketing/Hero";
-import { Features } from "@/components/marketing/Features";
-import { HowItWorks } from "@/components/marketing/HowItWorks";
-import { Partners } from "@/components/marketing/Partners";
-import { CTA } from "@/components/marketing/CTA";
+import type { Metadata } from "next";
+import HomeClient from "@/components/home/HomeClient";
+
+export const metadata: Metadata = {
+  title: "Home - Engame",
+  description: "Sell More With Tap Master",
+};
 
 export default function HomePage() {
-  return (
-    <>
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Partners />
-      <CTA />
-    </>
-  );
+  return <HomeClient />;
 }
 
 // Code For Homepage 
