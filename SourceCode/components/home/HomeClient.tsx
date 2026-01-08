@@ -3,10 +3,8 @@
 
 import { useModalContext } from "@/context/ModalContext";
 import { Section } from "@/components/layout/Section";
-import { PartnerContent } from "@/components/home/legacy/PartnerContent";
-import { BrandCarousel } from "@/components/home/legacy/BrandCarousel";
+import { TrustedCompanies } from "@/components/marketing/TrustedCompanies";
 import { HowItWork } from "@/components/home/legacy/HowItWork";
-import { HowWork } from "@/components/home/legacy/HowWork";
 import { TrendingGame } from "@/components/home/legacy/TrendingGame";
 import { SubscribePlan } from "@/components/home/legacy/SubscribePlan";
 
@@ -53,7 +51,7 @@ export default function HomeClient() {
           </Section>
         </div>
 
-        <PartnerContent backgroundImage />
+        <TrustedCompanies />
 
         <div
           style={{
@@ -63,9 +61,7 @@ export default function HomeClient() {
           }}
           className="flex justify-center items-end mb-8 md:mb-0 bg-yellow-400 relative"
         />
-
-        <BrandCarousel />
-
+        
         <div className="bg-white">
           <div
             style={{
@@ -196,8 +192,6 @@ export default function HomeClient() {
         </div>
 
         <HowItWork mediaUrl="https://engame.tech/assets/images/1920x700.mp4" />
-
-        <HowWork />
 
         <TrendingGame />
 

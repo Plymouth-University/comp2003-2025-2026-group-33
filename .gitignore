@@ -39,4 +39,4 @@ pnpm-debug.log*
 
 # misc
 *.swp
-*.tmp
+*.tmp.claude/
