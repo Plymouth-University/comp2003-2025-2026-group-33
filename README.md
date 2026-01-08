@@ -1,4 +1,4 @@
-# ENGAME Marketing Website Rebuild
+# ENGAME Website Rebuild
 
 **COMP2003 Group Project - Group 33**
 
