@@ -1,0 +1,28 @@
+📝 Team Internal Meeting – 4 January 2026
+Project: Rebuilding of TypeScript Webpage
+Module: COMP2003 – Rebuilding TypeScript
+Team: Group 33
+Attendees: Maksym, Dylan, Joe
+Duration: 15:30 - 16:30
+Location: Discord
+
+🎯 Agenda
+Review current progress on the rebuild project
+Decide next development priorities (pages & components)
+Allocate individual responsibilities
+
+🧩 Discussion Summary
+The team discussed ongoing work on the site rebuild. We reviewed progress on page development and agreed to prioritise completing the Home and Our Story pages, as well as fixing and finalising shared components (e.g., Slideshow, Header, TrustedCompanies).
+There are known bugs in several UI sections which we aim to fix in parallel with completing these pages.
+The Trello board will be updated with current tasks and progress markers. The GitHub repo is being actively used for commits and task tracking.
+
+✅ Agreed Actions 
+Action	                                  Responsible	 Deadline
+Complete Home page	                      Dylan	       8 January 2026
+Complete Our Story page & fix components	Maksym	     8 January 2026
+Draft presentation & write script	        Joe	         8 January 2026
+
+📎 Notes
+All team members will aim to push code to GitHub regularly and commit with clear messages.
+Meeting minutes will be shared in the project docs folder.
+Next internal meeting scheduled after Sprint 2 checkpoint.
