@@ -225,7 +225,7 @@ export default function OurStoryPage() {
           <Slideshow activeKey={page} direction={direction} page={page}>
             {/* 2021 */}
             <SlideshowItem>
-              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-10 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-10 items-start">
                 {/* left image */}
                 <div className="flex justify-center">
                   <img
@@ -298,7 +298,7 @@ export default function OurStoryPage() {
 
             {/* 2022 */}
             <SlideshowItem>
-              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-10 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-10 items-start">
                 <div className="flex justify-center">
                   <img
                     src="/assets/images/our-story/EG---Landing-ourstory_milestone-2(D).png"
@@ -335,7 +335,7 @@ export default function OurStoryPage() {
 
             {/* 2023 */}
             <SlideshowItem>
-              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-10 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-10 items-start">
                 <div className="flex justify-center">
                   <img
                     src="/assets/images/our-story/EG---Landing-ourstory_milestone-2(D).png"
