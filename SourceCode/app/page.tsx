@@ -1,13 +1,14 @@
 // app/page.tsx
+import type { Metadata } from "next";
+import HomeClient from "@/components/home/HomeClient";
+
+export const metadata: Metadata = {
+  title: "Home - Engame",
+  description: "Sell More With Tap Master",
+};
 
 export default function HomePage() {
-  return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-4">
-      <h1 className="text-4xl font-bold">ENIDIA – New Marketing Site</h1>
-      <p className="text-lg text-gray-600 text-center max-w-xl">
-        Home route is working. Next step: connect this page to the new layout
-        and sections (hero, features, carousel, etc.).
-      </p>
-    </main>
-  );
+  return <HomeClient />;
 }
+
+// Code For Homepage 

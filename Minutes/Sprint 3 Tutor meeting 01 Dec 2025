@@ -1,0 +1,38 @@
+#📝 Sprint 3 Tutor Meeting – 1 Dec 2025
+
+Project: Rebuilding of TypeScript Webpage to a Modern Modular System
+Module: COMP2003 – Rebuilding TypeScript
+Team: Group 33
+Attendees: Maksym, Dylan, Joe
+Duration: 12:40–13:10
+Location: SMB 102
+
+##🎯 Agenda
+-Review project progress
+-Discuss documentation requirements
+-Hosting and next steps
+
+##🍀 Discussion Summary
+-Tutor reviewed the current state of the ENIDIA webpage rebuild and confirmed the team is making good progress.
+-He stated the team should be ready before the Interim Presentation, assuming progress continues steadily.
+
+Tutor instructed the team to:
+-Prepare the full Project Plan
+-Have the client (Tyler Cheng) sign it before 19 December
+-Apply for University Web Hosting as soon as possible
+-Hosting approval may take several days
+-Must ensure the environment supports the required tech stack (Next.js, Node)
+-Tutor gave positive feedback overall and encouraged the team to continue the structural and UI rebuilds.
+
+✅ Agreed Actions
+Action	                                                  Responsible	  Deadline
+Complete the Project Plan document	                      Maksym	      3 Dec 2025
+Send Project Plan to client (Tyler Cheng) for signature 	Maksym	      Before 19 Dec 2025
+Submit University Web Hosting request	                    Dylan	        5 Dec 2025
+Continue development of components & pages for Sprint 3  	Entire Team	  Ongoing
+Prepare materials/demo for Interim Presentation	          Entire Team 	Before Interim Presentation
+
+🗒️ Notes
+-Ensure clear communication with the client to avoid delays.
+-Keep Trello and GitHub updated regularly.
+-Focus on completing major pages before polishing animations/features.

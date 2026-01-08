@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 
 interface SectionProps {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   bgColor?: string; // e.g. "bg-transparent"
   zIndex?: string; // e.g. "z-30"
