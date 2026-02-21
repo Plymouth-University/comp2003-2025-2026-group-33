@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import './config/database.js';
 import authRoutes from './routes/authRoutes.js';
+import { authenticate, type AuthRequest } from './middleware/auth.js';
 
 // Load environment variables
 dotenv.config();
@@ -17,9 +18,18 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 
-// Health check
+// Health check (public)
 app.get('/api/health', (req: Request, res: Response) => {
   res.json({ status: 'OK', message: 'Backend is running!' });
+});
+
+// Protected route example
+app.get('/api/profile', authenticate, (req: AuthRequest, res: Response) => {
+  res.json({
+    message: 'This is a protected route!',
+    userId: req.userId,
+    username: req.username
+  });
 });
 
 // 404 handler
