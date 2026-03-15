@@ -2,6 +2,8 @@ import type { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { createUser, findUserByEmail, findUserByUsername } from '../models/user.js';
+import { pool } from '../config/database.js';
+import type { AuthRequest } from '../middleware/auth.js';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback_secret';
 
@@ -64,4 +66,17 @@ export const login = async (req: Request, res: Response): Promise<void> => {
     token,
     user: { id: user.id, username: user.username, email: user.email }
   });
+};
+export const getMe = async (req: AuthRequest, res: Response): Promise<void> => {
+  const result = await pool.query(
+    'SELECT id, username, email, created_at FROM users WHERE id = $1',
+    [req.userId]
+  );
+
+  if (!result.rows[0]) {
+    res.status(404).json({ error: 'User not found' });
+    return;
+  }
+
+  res.json({ user: result.rows[0] });
 };
