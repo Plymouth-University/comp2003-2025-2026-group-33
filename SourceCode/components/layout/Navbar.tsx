@@ -22,8 +22,8 @@ export function Navbar({
 
   const navLinks = [
     { href: "/pricing", label: "Pricing" },
-    { href: "/brand-owner", label: "For Business" },
-    { href: "/gamer", label: "For Gamers" },
+    { href: "/for-Business", label: "For Business" },
+    { href: "/for-gamers", label: "For Gamers" },
     { href: "/blog", label: "Blog" },
     { href: "/our-story", label: "Our Story" },
     { href: "/faq", label: "FAQ" },

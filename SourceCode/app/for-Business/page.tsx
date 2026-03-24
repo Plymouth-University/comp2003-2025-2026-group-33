@@ -1,6 +1,9 @@
 // app/for-business/page.tsx
 import type { Metadata } from "next";
-import { HowItWork, PartnerContent, Section, SubscribePlan } from "@/components";
+import { HowItWork } from "@/components/home/legacy/HowItWork";
+import { SubscribePlan } from "@/components/home/legacy/SubscribePlan";
+import { Section } from "@/components/layout/Section";
+import { TrustedCompanies } from "@/components/marketing/TrustedCompanies";
 
 export const metadata: Metadata = {
   title: "I'm Brand Owner - Engame",
@@ -110,7 +113,7 @@ export default function ImBrandOwnerPage() {
           </div>
         </Section>
 
-        <HowItWork />
+        <HowItWork mediaUrl="/assets/videos/1280x800.mp4" />
 
         <Section>
           <div className="grid grid-cols-1 md:grid-cols-3 py-10 gap-10 md:gap-6 xl:gap-20">
@@ -150,7 +153,7 @@ export default function ImBrandOwnerPage() {
 
         <SubscribePlan backgroundImage />
 
-        <PartnerContent />
+        <TrustedCompanies />
       </div>
     </>
   );
