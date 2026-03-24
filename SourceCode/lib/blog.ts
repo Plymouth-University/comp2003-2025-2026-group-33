@@ -16,8 +16,8 @@ export const blogs: BlogType[] = [
     avatar: "/assets/images/icon.png",
     author: "Engame",
     datetime: "2022-07-13 10:48",
-    image_lg: "/assets/images/09 blog/engame_can_games_boost_sales.gif",
-    image: "/assets/images/09 blog/engame_can_games_boost_sales.gif",
+    image_lg: "/assets/images/blog/engame_can_games_boost_sales.gif",
+    image: "/assets/images/blog/engame_can_games_boost_sales.gif",
     title: "Can Games Boost Sales?",
     desc: 'Replace the "games" in the title with anything, say "advertisements", "social media", "gurus", "wind & water"...',
     content: `<div>
@@ -40,8 +40,8 @@ export const blogs: BlogType[] = [
     avatar: "/assets/images/icon.png",
     author: "Engame",
     datetime: "2022-04-02 19:33",
-    image: "/assets/images/09 blog/engame_maxis_top_startup.jpg",
-    image_lg: "/assets/images/09 blog/engame_maxis_top_startup.jpg",
+    image: "/assets/images/blog/engame_maxis_top_startup.jpg",
+    image_lg: "/assets/images/blog/engame_maxis_top_startup.jpg",
     title: "Maxis Market Access Day Top 100 Startups",
     desc: "Shortly after we were awarded the Commercial Ready Game winner, we were informed by Maxis that we were selected to be...",
     content: `<div>
@@ -54,8 +54,8 @@ export const blogs: BlogType[] = [
     avatar: "/assets/images/icon.png",
     author: "Engame",
     datetime: "2022-03-11 14:31",
-    image: "/assets/images/09 blog/engame_mdec_dice_winner.jpg",
-    image_lg: "/assets/images/09 blog/engame_mdec_dice_winner.jpg",
+    image: "/assets/images/blog/engame_mdec_dice_winner.jpg",
+    image_lg: "/assets/images/blog/engame_mdec_dice_winner.jpg",
     title: "MDEC DiCE 2019 Commercial Ready Game Winner",
     desc: "In year 2017 when we first got ourselves into the then called IPCC (Intellectual Property Creators' Challenge)...",
     content: `<div>
