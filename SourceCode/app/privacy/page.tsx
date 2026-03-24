@@ -10,8 +10,7 @@ export default function PrivacyPage() {
   return (
     <Section className="pt-10 md:pt-14">
       <div className="mx-auto max-w-4xl">
-        {/* If you have @tailwindcss/typography installed, this will look nicer */}
-        <div className="prose prose-invert max-w-none prose-p:text-slate-200 prose-li:text-slate-200">
+        <div className="font-lato text-base space-y-2">
           <b>Privacy Policy</b>
           <br />
           ENIDEA SDN BHD (Company No. 1262854-M) a company incorporated in
