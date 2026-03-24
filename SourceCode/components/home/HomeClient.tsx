@@ -371,7 +371,7 @@ export default function HomeClient() {
           </Section>
         </div>
 
-        <SubscribePlan backgroundImageUrl="/assets/images/backgrounds/EG---bg-2.jpg" onSubscribe={() => setModalName("signup")} />
+        <SubscribePlan backgroundImageUrl="/assets/images/backgrounds/EG---bg-2.jpg" />
       </div>
     </>
   );

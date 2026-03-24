@@ -1,6 +1,6 @@
 "use client";
 
-import { Key, useState } from "react";
+import React, { Key, useState } from "react";
 import Link from "next/link";
 import { Section } from "@/components/layout/Section";
 import { AnimatePresence, motion } from "framer-motion";
@@ -8,10 +8,10 @@ import { FiChevronDown } from "react-icons/fi";
 
 function Collapsible(props: {
   title: string;
-  content: JSX.Element;
+  content: React.ReactElement;
   isOpen?: boolean;
   collapibleId?: Key;
-}): JSX.Element {
+}): React.ReactElement {
   const { title, content, isOpen = false, collapibleId = 0 } = props;
 
   return (
