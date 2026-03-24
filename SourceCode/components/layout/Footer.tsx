@@ -50,10 +50,10 @@ export function Footer() {
               Pricing
             </Link>
             <Link href="/for-Business" className="hover:underline">
-              Brand Owner
+              For Business
             </Link>
             <Link href="/for-gamers" className="hover:underline">
-              Gamer
+              For Gamers
             </Link>
             <Link href="/blog" className="hover:underline">
               Blog

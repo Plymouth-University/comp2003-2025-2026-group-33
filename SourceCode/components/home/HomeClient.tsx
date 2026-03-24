@@ -1,12 +1,53 @@
 // components/home/HomeClient.tsx
 "use client";
 
+import { useState, useEffect } from "react";
 import { useModalContext } from "@/context/ModalContext";
 import { Section } from "@/components/layout/Section";
 import { TrustedCompanies } from "@/components/marketing/TrustedCompanies";
 import { HowItWork } from "@/components/home/legacy/HowItWork";
 import { TrendingGame } from "@/components/home/legacy/TrendingGame";
 import { SubscribePlan } from "@/components/home/legacy/SubscribePlan";
+
+const testimonialImages = [
+  "/assets/images/carousel/TeaLive.png",
+  "/assets/images/carousel/Fave.png",
+  "/assets/images/carousel/HerbaLife.png",
+  "/assets/images/carousel/TexasChicken.png",
+];
+
+function TestimonialsCarousel() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonialImages.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="relative w-full">
+      <img
+        src={testimonialImages[current]}
+        alt="testimonial"
+        className="rounded-2xl border-4 border-white w-full"
+      />
+      <button
+        onClick={() => setCurrent((prev) => (prev - 1 + testimonialImages.length) % testimonialImages.length)}
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow"
+      >
+        &#8249;
+      </button>
+      <button
+        onClick={() => setCurrent((prev) => (prev + 1) % testimonialImages.length)}
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow"
+      >
+        &#8250;
+      </button>
+    </div>
+  );
+}
 
 export default function HomeClient() {
   const { setModalName } = useModalContext();
@@ -52,6 +93,22 @@ export default function HomeClient() {
         </div>
 
         <TrustedCompanies />
+
+        {/* Testimonials */}
+        <div
+          style={{
+            backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="flex flex-col items-center py-10 max-w-4xl mx-auto px-4">
+            <p className="text-center font-montserrat font-semibold text-3xl uppercase">
+              LET&apos;S HEAR WHAT OUR SUBSCRIBERS HAVE TO SAY
+            </p>
+            <hr className="mt-2 mb-10 mx-auto w-1/3 md:w-1/5 text-center border-black border-2" />
+            <TestimonialsCarousel />
+          </div>
+        </div>
 
         <div
           style={{
@@ -121,8 +178,8 @@ export default function HomeClient() {
           <div className="flex flex-col space-y-6 md:space-y-5 py-10">
             <p className="text-center font-montserrat font-semibold text-3xl uppercase">
               No Code! Even Grandmas Can Do It!
-              <hr className="mx-auto w-1/4 md:w-1/4 text-center border-black border-2 mt-2 " />
             </p>
+            <hr className="mx-auto w-1/4 md:w-1/4 text-center border-black border-2 mt-2 " />
 
             <h6 className="text-center font-montserrat text-2xl">
               Just upload your brand logo or product images to <b>Tap Master</b> and you are good to go!
@@ -192,6 +249,66 @@ export default function HomeClient() {
         </div>
 
         <HowItWork mediaUrl="https://engame.tech/assets/images/1920x700.mp4" />
+
+        {/* WHY TAP MASTER IS THE FUTURE OF MARKETING */}
+        <div
+          style={{
+            backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="flex flex-col items-center pt-10">
+            <p className="text-center font-montserrat font-semibold text-3xl">
+              WHY TAP MASTER IS THE FUTURE OF MARKETING
+            </p>
+            <hr className="mt-2 mx-auto w-1/3 md:w-1/5 text-center border-black border-2" />
+          </div>
+          <Section bgColor="bg-transparent">
+            <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
+              <div className="flex flex-grow flex-col md:max-w-md items-center justify-center md:items-start space-y-6 md:space-y-2">
+                <img src="/assets/images/home/LEVEL_1.png" alt="level 1" className="w-[180px] h-auto" />
+                <p className="text-center md:text-left font-montserrat font-semibold text-2xl">NEXT GEN MARKETING</p>
+                <p className="text-center md:text-left font-lato text-xl">Level up your marketing strategies with Tap Master and reach out to a greater audience!</p>
+              </div>
+              <div className="flex justify-center items-center relative w-full py-5">
+                <img src="/assets/images/home/home_1.png" alt="next gen marketing" className="max-w-full w-[500px]" />
+              </div>
+            </div>
+          </Section>
+
+          <div
+            style={{
+              backgroundImage: "url('/assets/images/backgrounds/EG---bg-2.jpg')",
+              backgroundSize: "cover",
+            }}
+          >
+            <Section bgColor="bg-transparent">
+              <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
+                <div className="flex flex-grow flex-col items-center justify-center md:items-start md:max-w-md space-y-6 md:space-y-2 md:order-last">
+                  <img src="/assets/images/home/LEVEL_2.png" alt="level 2" className="w-[180px] h-auto" />
+                  <p className="text-center md:text-left font-montserrat font-semibold text-2xl">ENTER-GAGEMENT</p>
+                  <p className="text-center md:text-left font-lato text-xl">Tap Master helps to both entertain &amp; engage with your customers and build a community that supports your brand.</p>
+                </div>
+                <div className="flex justify-center items-center md:justify-start relative md:w-1/2 md:order-first">
+                  <img src="/assets/images/home/home_2.png" alt="enter-gagement" className="max-w-full w-[400px]" />
+                </div>
+              </div>
+            </Section>
+          </div>
+
+          <Section bgColor="bg-transparent">
+            <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
+              <div className="flex flex-grow flex-col md:max-w-md items-center justify-center md:items-start space-y-6 md:space-y-2">
+                <img src="/assets/images/home/LEVEL_3.png" alt="level 3" className="w-[180px] h-auto" />
+                <p className="text-center md:text-left font-montserrat font-semibold text-2xl">REVOLUTIONIZE SALES</p>
+                <p className="text-center md:text-left font-lato text-xl">Get the results that make your business last a lifetime. Scale up your business with Tap Master.</p>
+              </div>
+              <div className="flex justify-center items-center relative w-full">
+                <img src="/assets/images/home/home_3.png" alt="revolutionize sales" className="max-w-full w-[400px]" />
+              </div>
+            </div>
+          </Section>
+        </div>
 
         <TrendingGame />
 

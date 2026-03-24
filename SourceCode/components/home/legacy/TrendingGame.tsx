@@ -5,28 +5,33 @@ import { Section } from "@/components/layout/Section";
 
 export function TrendingGame() {
   const games = [
-    { src: "/assets/images/games/EG---Landing-home_game-1(D).png", alt: "Game 1" },
-    { src: "/assets/images/games/EG---Landing-home_game-2(D).png", alt: "Game 2" },
-    { src: "/assets/images/games/EG---Landing-home_game-3(D).png", alt: "Game 3" },
-    { src: "/assets/images/games/EG---Landing-home_game-4(D).png", alt: "Game 4" },
-    { src: "/assets/images/games/EG---Landing-home_game-5(D).png", alt: "Game 5" },
+    { src: "/assets/images/games/EG---Landing-home_game-1(D).png", name: "Legendary moai" },
+    { src: "/assets/images/games/EG---Landing-home_game-2(D).png", name: "The largest one" },
+    { src: "/assets/images/games/EG---Landing-home_game-3(D).png", name: "Deep blue sea" },
+    { src: "/assets/images/games/EG---Landing-home_game-4(D).png", name: "Scissors rock paper" },
+    { src: "/assets/images/games/EG---Landing-home_game-5(D).png", name: "Super fast food" },
   ];
 
   return (
-    <div className="bg-white">
-      <Section className="py-12">
-        <div className="space-y-5">
-          <p className="font-montserrat font-semibold text-3xl uppercase text-center">
+    <div
+      style={{
+        backgroundImage: "url('/assets/images/backgrounds/EG---bg-2.jpg')",
+        backgroundSize: "cover",
+      }}
+    >
+      <Section bgColor="bg-transparent">
+        <div className="flex flex-col items-center py-10">
+          <p className="text-center font-montserrat font-semibold text-3xl uppercase z-10 py-2 mt-7">
             Trending Games
           </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <hr className="mb-10 mx-auto w-2/6 md:w-1/6 text-center border-black border-2" />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 w-full pb-10">
             {games.map((g) => (
-              <div
-                key={g.alt}
-                className="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden"
-              >
-                <img src={g.src} alt={g.alt} className="w-full h-auto" />
+              <div key={g.name} className="flex flex-col items-center">
+                <div className="h-44 flex items-center justify-center">
+                  <img src={g.src} alt={g.name} className="h-full w-auto" />
+                </div>
+                <p className="font-montserrat font-bold text-lg mt-2 text-center">{g.name}</p>
               </div>
             ))}
           </div>
