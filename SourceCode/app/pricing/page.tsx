@@ -14,7 +14,7 @@ export default function PricingPage() {
   return (
     <div
       style={{
-        backgroundImage: `url("/assets/images/EG---bg.jpg")`,
+        backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
         backgroundAttachment: "fixed",
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
@@ -40,7 +40,7 @@ export default function PricingPage() {
             <div className="flex justify-center items-center">
               <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
                 <img
-                  src="/assets/images/08 Pricing/EG---Landing-pricing_top-main(D).png"
+                  src="/assets/images/pricing/EG---Landing-pricing_top-main(D).png"
                   width={800}
                   height={800}
                   alt="pricing"
@@ -51,7 +51,7 @@ export default function PricingPage() {
         </Section>
       </div>
 
-      <SubscribePlan backgroundImageUrl="/assets/images/EG---bg-2.jpg" />
+      <SubscribePlan backgroundImageUrl="/assets/images/backgrounds/EG---bg-2.jpg" />
 
       <TrustedCompanies />
     </div>

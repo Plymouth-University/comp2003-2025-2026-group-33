@@ -73,7 +73,7 @@ export default function ContactPage() {
             </div>
             <div className="flex max-w-md py-10">
               <img
-                src="/assets/images/01 Home/EG---Landing-home_feedback(D).png"
+                src="/assets/images/home/EG---Landing-home_feedback(D).png"
                 width={800}
                 height={800}
                 alt="contact"

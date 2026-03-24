@@ -1,7 +1,8 @@
 // app/im-gamer/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Section, TrendingGame } from "@/components";
+import { Section } from "@/components/layout/Section";
+import { TrendingGame } from "@/components/home/legacy/TrendingGame";
 import "react-multi-carousel/lib/styles.css";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function ImGamerPage() {
     <>
       <div
         style={{
-          backgroundImage: `url("/assets/images/EG---bg.jpg")`,
+          backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",
@@ -49,7 +50,7 @@ export default function ImGamerPage() {
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
                   <img
-                    src="/assets/images/04 Gamer/EG---Landing-gamer_top-main(D).png"
+                    src="/assets/images/gamer/EG---Landing-gamer_top-main(D).png"
                     width={800}
                     height={800}
                     alt="home-1"
@@ -79,19 +80,19 @@ export default function ImGamerPage() {
                   title: "35 Exciting Retro Hyper Casual Games!",
                   desc: "All our games are designed to be easy to play, yet challenge your mind and fingers to their limits!",
                   imageUrl:
-                    "/assets/images/04 Gamer/EG---Landing-gamer_icon-1(D).png",
+                    "/assets/images/gamer/EG---Landing-gamer_icon-1(D).png",
                 },
                 {
                   title: "Play Games and Redeem Vouchers!",
                   desc: "Collect Points (PTS) by playing with computer or other players, redeem the hottest deal in town!",
                   imageUrl:
-                    "/assets/images/04 Gamer/EG---Landing-gamer_icon-3(D).png",
+                    "/assets/images/gamer/EG---Landing-gamer_icon-3(D).png",
                 },
                 {
                   title: "Challenge Others to Win Vouchers Faster!",
                   desc: "Earn up to 10 times the Points (PTS) by playing with other players to redeem your vouchers 10 times faster!",
                   imageUrl:
-                    "/assets/images/04 Gamer/EG---Landing-gamer_icon-2(D).png",
+                    "/assets/images/gamer/EG---Landing-gamer_icon-2(D).png",
                 },
               ].map((i, k) => (
                 <div
@@ -125,7 +126,7 @@ export default function ImGamerPage() {
             <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
               <div className="max-w-xs md:h-32 md:w-32 flex justify-center rounded-lg overflow-hidden">
                 <img
-                  src="/assets/images/04 Gamer/EG---cat.png"
+                  src="/assets/images/gamer/EG---cat.png"
                   width={800}
                   height={800}
                   alt="EG---cat "
@@ -160,7 +161,7 @@ export default function ImGamerPage() {
             <div
               style={{
                 backgroundImage:
-                  "url('/assets/images/04 Gamer/EG---Landing-gamer_playgame(D).jpg')",
+                  "url('/assets/images/gamer/EG---Landing-gamer_playgame(D).jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -180,7 +181,7 @@ export default function ImGamerPage() {
         <div className="relative bg-white">
           <div
             style={{
-              backgroundImage: "url('/assets/images/EG---bg.jpg')",
+              backgroundImage: "url('/assets/images/backgrounds/EG---bg.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

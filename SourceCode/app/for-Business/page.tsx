@@ -16,7 +16,7 @@ export default function ImBrandOwnerPage() {
     <>
       <div
         style={{
-          backgroundImage: `url("/assets/images/EG---bg.jpg")`,
+          backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",
@@ -43,7 +43,7 @@ export default function ImBrandOwnerPage() {
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
                   <img
-                    src="/assets/images/03 Brand owner/EG---Landing-brand_top-main(D).png"
+                    src="/assets/images/brand-owner/EG---Landing-brand_top-main(D).png"
                     width={959}
                     height={800}
                     alt="home-1"
@@ -72,19 +72,19 @@ export default function ImBrandOwnerPage() {
                   title: "Up to 50% Increased Leads & Sales!",
                   desc: "Featuring your products and offers in Tap Master keeps your new and repeat customers hyped before they even enter your shop! Our numbers show 63 out of 100 vouchers are redeemed! 900% higher redemption rate with Tap Master! ",
                   imageUrl:
-                    "/assets/images/03 Brand owner/EG---Landing-brand_icon-1(D).png",
+                    "/assets/images/brand-owner/EG---Landing-brand_icon-1(D).png",
                 },
                 {
                   title: "Up to 3200% Increased Brand Stickiness!",
                   desc: "With Tap Master, you will go from a 5 seconds ‘can't wait to skip Youtube ads’ to ‘willingly play a game and look at your brand or products’ for a whooping 180 seconds! This will cause the players to think about your brand much often!",
                   imageUrl:
-                    "/assets/images/03 Brand owner/EG---Landing-brand_icon-2(D).png",
+                    "/assets/images/brand-owner/EG---Landing-brand_icon-2(D).png",
                 },
                 {
                   title: "Up to 300 Hours of Advertisement!",
                   desc: "With just 200 players playing your game 3 minutes a day for a month, you will get 300 hours worth of advertisement! For USD49, the amount of advertisement value is totally unbeatable! How much can you get from Facebook or Google with USD49?",
                   imageUrl:
-                    "/assets/images/03 Brand owner/EG---Landing-brand_icon-3(D).png",
+                    "/assets/images/brand-owner/EG---Landing-brand_icon-3(D).png",
                 },
               ].map((i, k) => (
                 <div
@@ -121,18 +121,18 @@ export default function ImBrandOwnerPage() {
               {
                 title: "1. Upload your vouchers to us on our website",
                 imageUrl:
-                  "/assets/images/03 Brand owner/EG---Landing_brand_voucher-1(D).jpg",
+                  "/assets/images/brand-owner/EG---Landing_brand_voucher-1(D).jpg",
               },
               {
                 title: "2. Your vouchers will be listed in our Game as Reward",
                 imageUrl:
-                  "/assets/images/03 Brand owner/EG---Landing_brand_voucher-2(D).jpg",
+                  "/assets/images/brand-owner/EG---Landing_brand_voucher-2(D).jpg",
               },
               {
                 title:
                   "3. Game Start! Players To Win The Vouchers From Your Games!",
                 imageUrl:
-                  "/assets/images/03 Brand owner/EG---Landing_brand_voucher-3(D).jpg",
+                  "/assets/images/brand-owner/EG---Landing_brand_voucher-3(D).jpg",
               },
             ].map((i, k) => (
               <div

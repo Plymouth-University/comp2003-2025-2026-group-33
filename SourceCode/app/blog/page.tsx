@@ -16,7 +16,7 @@ export default function BlogPage() {
     <>
       <div
         style={{
-          backgroundImage: "url('/assets/images/EG---bg.jpg')",
+          backgroundImage: "url('/assets/images/backgrounds/EG---bg.jpg')",
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",
