@@ -2,7 +2,7 @@
 
 import { Key, useState } from "react";
 import Link from "next/link";
-import { Section } from "@/components";
+import { Section } from "@/components/layout/Section";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
 
@@ -240,7 +240,7 @@ export default function FAQClient() {
                 Our team will be happy to help!
               </p>
 
-              <Link href="/contact-us">
+              <Link href="/contact">
                 <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                   Get in touch
                 </button>
