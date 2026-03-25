@@ -185,7 +185,7 @@ export default function ImGamerPage() {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-            className="absolute bottom-0 top-auto h-5/6 md:h-2/3 w-full"
+            className="absolute bottom-0 top-auto h-1/2 md:h-1/3 w-full"
           />
 
           <Section zIndex="z-10">

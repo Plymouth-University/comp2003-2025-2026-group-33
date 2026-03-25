@@ -15,7 +15,7 @@ export function Section({
   zIndex = "",
 }: SectionProps) {
   return (
-    <section className={`w-full px-4 md:px-8 lg:px-16 ${bgColor} ${zIndex} ${className}`}>
+    <section className={`w-full px-4 md:px-8 lg:px-16 ${bgColor} ${zIndex ? `relative ${zIndex}` : ''} ${className}`}>
       <div className="max-w-6xl mx-auto">{children}</div>
     </section>
   );
