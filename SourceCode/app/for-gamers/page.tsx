@@ -197,7 +197,7 @@ export default function ImGamerPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
                 {[
                   {
-                    image: "/assets/images/voucher-twinbow.jpg",
+                    image: "/assets/images/voucher/voucher-twinbow.jpg",
                     title: "Buy 100g for RM2 Deal",
                     desc: "Twinbow",
                     point: "88",
@@ -205,7 +205,7 @@ export default function ImGamerPage() {
                     redeemed: "11",
                   },
                   {
-                    image: "/assets/images/voucher-cmb15.jpeg",
+                    image: "/assets/images/voucher/voucher-cmb15.jpeg",
                     title: "15% off Voucher",
                     desc: "Call me baby",
                     point: "88",
@@ -213,7 +213,7 @@ export default function ImGamerPage() {
                     redeemed: "18",
                   },
                   {
-                    image: "/assets/images/voucher-cmb50.jpeg",
+                    image: "/assets/images/voucher/voucher-cmb50.jpeg",
                     title: "50% off Voucher",
                     desc: "Call me baby",
                     point: "188",
