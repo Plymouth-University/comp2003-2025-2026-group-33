@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 export default function ImGamerPage() {
   return (
     <>
+      {/* Hero section - yellow background */}
       <div
         style={{
           backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
@@ -60,7 +61,10 @@ export default function ImGamerPage() {
             </div>
           </Section>
         </div>
+      </div>
 
+      {/* "Tired of games..." section - white background */}
+      <div className="bg-white">
         <Section>
           <div className="flex flex-col items-center space-y-2 py-14">
             <p className="text-center font-montserrat font-bold text-3xl">
@@ -120,7 +124,10 @@ export default function ImGamerPage() {
             </div>
           </div>
         </Section>
+      </div>
 
+      {/* "How to join the fun?" section - white background */}
+      <div className="bg-white">
         <Section>
           <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
             <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
@@ -175,126 +182,117 @@ export default function ImGamerPage() {
             </div>
           </div>
         </Section>
+      </div>
 
-        <TrendingGame />
+      <TrendingGame />
 
-        <div className="relative bg-white">
-          <div
-            style={{
-              backgroundImage: "url('/assets/images/backgrounds/EG---bg.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            className="absolute bottom-0 top-auto h-1/2 md:h-1/3 w-full"
-          />
+      <div className="bg-white">
+        <Section>
+          <div className="flex flex-col items-center py-8 space-y-8">
+            <p className="text-center font-montserrat font-bold text-3xl">
+              Hot Vouchers
+            </p>
 
-          <Section zIndex="z-10">
-            <div className="flex flex-col items-center py-8 space-y-8">
-              <p className="text-center font-montserrat font-bold text-3xl">
-                Hot Vouchers
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
+              {[
+                {
+                  image: "/assets/images/voucher/voucher-twinbow.jpg",
+                  title: "Buy 100g for RM2 Deal",
+                  desc: "Twinbow",
+                  point: "88",
+                  progress: "w-1/3",
+                  redeemed: "11",
+                },
+                {
+                  image: "/assets/images/voucher/voucher-cmb15.jpeg",
+                  title: "15% off Voucher",
+                  desc: "Call me baby",
+                  point: "88",
+                  progress: "w-1/2",
+                  redeemed: "18",
+                },
+                {
+                  image: "/assets/images/voucher/voucher-cmb50.jpeg",
+                  title: "50% off Voucher",
+                  desc: "Call me baby",
+                  point: "188",
+                  progress: "w-1/4",
+                  redeemed: "8",
+                },
+              ].map((i, k) => (
+                <div
+                  key={`voucher-${k}`}
+                  className="flex flex-col border overflow-hidden bg-white rounded-xl shadow-lg md:rounded"
+                >
+                  <div className="flex justify-center">
+                    <div
+                      style={{
+                        backgroundImage: `url('${i.image}')`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                      className="flex-grow flex justify-center items-center relative h-56"
+                    />
+                  </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
-                {[
-                  {
-                    image: "/assets/images/voucher/voucher-twinbow.jpg",
-                    title: "Buy 100g for RM2 Deal",
-                    desc: "Twinbow",
-                    point: "88",
-                    progress: "w-1/3",
-                    redeemed: "11",
-                  },
-                  {
-                    image: "/assets/images/voucher/voucher-cmb15.jpeg",
-                    title: "15% off Voucher",
-                    desc: "Call me baby",
-                    point: "88",
-                    progress: "w-1/2",
-                    redeemed: "18",
-                  },
-                  {
-                    image: "/assets/images/voucher/voucher-cmb50.jpeg",
-                    title: "50% off Voucher",
-                    desc: "Call me baby",
-                    point: "188",
-                    progress: "w-1/4",
-                    redeemed: "8",
-                  },
-                ].map((i, k) => (
-                  <div
-                    key={`voucher-${k}`}
-                    className="flex flex-col border overflow-hidden bg-white rounded-xl shadow-lg md:rounded"
-                  >
-                    <div className="flex justify-center">
-                      <div
-                        style={{
-                          backgroundImage: `url('${i.image}')`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                        }}
-                        className="flex-grow flex justify-center items-center relative h-56"
-                      />
+                  <div className="flex-1 font-montserrat px-4 py-6 flex flex-col justify-between">
+                    <div>
+                      <p className="font-bold text-xl">{i.title}</p>
+                      <p className="text-xl mb-4">{i.desc}</p>
                     </div>
 
-                    <div className="flex-1 font-montserrat px-4 py-6 flex flex-col justify-between">
-                      <div>
-                        <p className="font-bold text-xl">{i.title}</p>
-                        <p className="text-xl mb-4">{i.desc}</p>
-                      </div>
+                    <div>
+                      <p className="text-gray-300 text-xl">
+                        <span className="text-yellow-400 font-bold">
+                          {i.point}
+                        </span>{" "}
+                        points
+                      </p>
 
-                      <div>
-                        <p className="text-gray-300 text-xl">
-                          <span className="text-yellow-400 font-bold">
-                            {i.point}
-                          </span>{" "}
-                          points
-                        </p>
-
-                        <div className="relative pt-1 mb-4">
-                          <div className="overflow-hidden h-4 text-xs flex rounded-full bg-gray-200">
-                            <div
-                              className={
-                                "rounded-full shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-400 " +
-                                i.progress
-                              }
-                            />
-                          </div>
+                      <div className="relative pt-1 mb-4">
+                        <div className="overflow-hidden h-4 text-xs flex rounded-full bg-gray-200">
+                          <div
+                            className={
+                              "rounded-full shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-400 " +
+                              i.progress
+                            }
+                          />
                         </div>
-
-                        <p className="text-sm">{i.redeemed} redeemed</p>
                       </div>
+
+                      <p className="text-sm">{i.redeemed} redeemed</p>
                     </div>
                   </div>
-                ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </Section>
+
+        <Section>
+          <div className="bg-white rounded-xl p-10 shadow-lg my-10">
+            <div className="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
+              <div className="flex flex-col space-y-2">
+                <h1 className="text-center md:text-left font-montserrat font-bold text-3xl capitalize">
+                  Games, Fun, Rewards! Let&apos;s Play Now!
+                </h1>
+
+                <p className="text-center md:text-left font-lato text-xl">
+                  <span className="font-bold">START</span> tapping and winning
+                  now!
+                </p>
+              </div>
+
+              <div className="flex flex-col justify-center">
+                <Link href="https://tapmaster.engame.tech">
+                  <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+                    Play Now
+                  </button>
+                </Link>
               </div>
             </div>
-          </Section>
-
-          <Section zIndex="z-10">
-            <div className="bg-white rounded-xl p-10 shadow-lg my-10">
-              <div className="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
-                <div className="flex flex-col space-y-2">
-                  <h1 className="text-center md:text-left font-montserrat font-bold text-3xl capitalize">
-                    Games, Fun, Rewards! Let&apos;s Play Now!
-                  </h1>
-
-                  <p className="text-center md:text-left font-lato text-xl">
-                    <span className="font-bold">START</span> tapping and winning
-                    now!
-                  </p>
-                </div>
-
-                <div className="flex flex-col justify-center">
-                  <Link href="https://tapmaster.engame.tech">
-                    <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                      Play Now
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </Section>
-        </div>
+          </div>
+        </Section>
       </div>
     </>
   );

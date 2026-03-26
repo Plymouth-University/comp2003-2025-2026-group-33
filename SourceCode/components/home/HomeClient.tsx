@@ -101,7 +101,7 @@ export default function HomeClient() {
             backgroundSize: "cover",
           }}
         >
-          <div className="flex flex-col items-center py-10 max-w-4xl mx-auto px-4">
+          <div className="flex flex-col items-center py-10 max-w-6xl mx-auto px-4">
             <p className="text-center font-montserrat font-semibold text-3xl uppercase">
               LET&apos;S HEAR WHAT OUR SUBSCRIBERS HAVE TO SAY
             </p>
@@ -174,6 +174,7 @@ export default function HomeClient() {
           </div>
         </div>
 
+        <div className="bg-white">
         <Section>
           <div className="flex flex-col space-y-6 md:space-y-5 py-10">
             <p className="text-center font-montserrat font-semibold text-3xl uppercase">
@@ -222,6 +223,7 @@ export default function HomeClient() {
             </div>
           </div>
         </Section>
+        </div>
 
         <div className="bg-white md:pt-8 lg:pt-18 xl:pt-28 2xl:pt-36">
           <div
@@ -248,7 +250,9 @@ export default function HomeClient() {
           />
         </div>
 
-        <HowItWork mediaUrl="https://engame.tech/assets/images/1920x700.mp4" />
+        <div className="bg-white">
+          <HowItWork mediaUrl="https://engame.tech/assets/images/1920x700.mp4" />
+        </div>
 
         {/* WHY TAP MASTER IS THE FUTURE OF MARKETING */}
         <div
@@ -371,7 +375,7 @@ export default function HomeClient() {
           </Section>
         </div>
 
-        <SubscribePlan backgroundImageUrl="/assets/images/backgrounds/EG---bg-2.jpg" />
+        <SubscribePlan backgroundImage backgroundImageUrl="/assets/images/backgrounds/EG---bg-2.jpg" />
       </div>
     </>
   );

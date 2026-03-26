@@ -60,7 +60,7 @@ export default function BlogDetailPage({
           <div className="flex items-center space-x-4">
             <div
               style={{
-                backgroundImage: "url('/assets/images/icon.png')",
+                backgroundImage: "url('/assets/images/icons/icon.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

@@ -6,7 +6,8 @@ import { useModalContext } from "@/context/ModalContext";
 import { FiCheckCircle } from "react-icons/fi";
 
 export function SubscribePlan({
-  backgroundImageUrl,
+  backgroundImage,
+  backgroundImageUrl = "/assets/images/backgrounds/EG---bg.jpg",
 }: {
   backgroundImage?: boolean;
   backgroundImageUrl?: string;
@@ -61,15 +62,15 @@ export function SubscribePlan({
   return (
     <div
       style={
-        backgroundImageUrl
+        backgroundImage
           ? {
-              backgroundImage: `url(‘${backgroundImageUrl}’)`,
+              backgroundImage: `url('${backgroundImageUrl}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }
           : undefined
       }
-      className="bg-white"
+      className={backgroundImage ? "" : "bg-white"}
     >
       <Section bgColor="bg-transparent" className="py-12">
         <div className="flex flex-col items-center">

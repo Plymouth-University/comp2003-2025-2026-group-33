@@ -51,7 +51,9 @@ export default function PricingPage() {
         </Section>
       </div>
 
-      <SubscribePlan backgroundImageUrl="/assets/images/backgrounds/EG---bg-2.jpg" />
+      <div className="bg-white py-8" />
+
+      <SubscribePlan backgroundImage backgroundImageUrl="/assets/images/backgrounds/EG---bg-2.jpg" />
 
       <TrustedCompanies />
     </div>

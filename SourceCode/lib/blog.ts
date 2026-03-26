@@ -13,7 +13,7 @@ export type BlogType = {
 
 export const blogs: BlogType[] = [
   {
-    avatar: "/assets/images/icon.png",
+    avatar: "/assets/images/icons/icon.png",
     author: "Engame",
     datetime: "2022-07-13 10:48",
     image_lg: "/assets/images/blog/engame_can_games_boost_sales.gif",
@@ -37,7 +37,7 @@ export const blogs: BlogType[] = [
     </div>`,
   },
   {
-    avatar: "/assets/images/icon.png",
+    avatar: "/assets/images/icons/icon.png",
     author: "Engame",
     datetime: "2022-04-02 19:33",
     image: "/assets/images/blog/engame_maxis_top_startup.jpg",
@@ -51,7 +51,7 @@ export const blogs: BlogType[] = [
     </div>`,
   },
   {
-    avatar: "/assets/images/icon.png",
+    avatar: "/assets/images/icons/icon.png",
     author: "Engame",
     datetime: "2022-03-11 14:31",
     image: "/assets/images/blog/engame_mdec_dice_winner.jpg",

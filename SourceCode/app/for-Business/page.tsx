@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 export default function ImBrandOwnerPage() {
   return (
     <>
+      {/* Hero section - yellow background */}
       <div
         style={{
           backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
@@ -53,7 +54,10 @@ export default function ImBrandOwnerPage() {
             </div>
           </Section>
         </div>
+      </div>
 
+      {/* "How Tap Master Helps" + feature cards - white background */}
+      <div className="bg-white">
         <Section>
           <div className="flex flex-col items-center space-y-2 py-14">
             <p className="text-center font-montserrat font-bold text-3xl">
@@ -112,7 +116,10 @@ export default function ImBrandOwnerPage() {
             </div>
           </div>
         </Section>
+      </div>
 
+      {/* "It's as simple as 1-2-3" + voucher steps - white background */}
+      <div className="bg-white">
         <HowItWork mediaUrl="/assets/videos/1280x800.mp4" />
 
         <Section>
@@ -150,11 +157,11 @@ export default function ImBrandOwnerPage() {
             ))}
           </div>
         </Section>
-
-        <SubscribePlan backgroundImage />
-
-        <TrustedCompanies />
       </div>
+
+      <SubscribePlan backgroundImage />
+
+      <TrustedCompanies />
     </>
   );
 }
