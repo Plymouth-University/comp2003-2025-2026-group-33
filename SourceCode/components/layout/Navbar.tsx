@@ -42,7 +42,7 @@ export function Navbar({
             transition={{ duration: 0.3 }}
             className="fixed pt-14 w-full h-full bg-white z-20 overflow-auto"
           >
-            <div className="container mx-auto p-4 lg:px-36 flex flex-col space-y-4 overflow-auto">
+            <div className="container mx-auto p-4 lg:px-8 flex flex-col space-y-4 overflow-auto">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <button
@@ -74,7 +74,7 @@ export function Navbar({
                 Start Free Trial
               </button>
               <Link href="https://tapmaster.engame.tech">
-                <button className="px-2 py-1 text-montserrat font-bold md:text-base bg-black text-white rounded hover:opacity-90 hover:shadow-lg">
+                <button className="w-full text-montserrat font-bold text-lg bg-black text-white border-2 border-black rounded-lg py-2 hover:opacity-90 hover:shadow-lg">
                   Start Game
                 </button>
               </Link>
@@ -85,7 +85,7 @@ export function Navbar({
 
       {/* Main Navbar */}
       <header className="z-20 h-14 flex justify-center bg-white border-b">
-        <div className="container mx-auto px-4 lg:px-36 py-3 md:py-2 flex justify-between items-center">
+        <div className="container mx-auto px-4 lg:px-8 py-3 md:py-2 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
             <div className="flex flex-col justify-center w-36 md:w-28 cursor-pointer">
@@ -101,7 +101,7 @@ export function Navbar({
           {/* Mobile Hamburger */}
           <button
             id="burger"
-            className="p-2 md:hidden flex items-center justify-center text-montserrat font-bold border border-black rounded-lg"
+            className="p-2 lg:hidden flex items-center justify-center text-montserrat font-bold border border-black rounded-lg"
             onClick={onToggleShowMenu}
             aria-label="Toggle menu"
           >
@@ -109,7 +109,7 @@ export function Navbar({
           </button>
 
           {/* Desktop Navigation */}
-          <div id="nav" className="space-x-1 md:flex hidden items-center">
+          <div id="nav" className="space-x-1 lg:flex hidden items-center">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
                 <button

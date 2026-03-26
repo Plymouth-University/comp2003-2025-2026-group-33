@@ -33,7 +33,7 @@ interface SignupForm {
 
 export function AppShell({ children }: AppShellProps) {
   const [showMenu, setShowMenu] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isMobile = useMediaQuery("(max-width: 1023px)");
 
   const {
     handleSubmit: handleSubmitLogin,
