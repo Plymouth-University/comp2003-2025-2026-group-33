@@ -11,57 +11,52 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+const yellowBg = {
+  backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
+  backgroundAttachment: "fixed",
+  backgroundPosition: "center",
+  backgroundRepeat: "repeat",
+  backgroundSize: "cover",
+} as React.CSSProperties;
+
 export default function ImGamerPage() {
   return (
-    <>
-      {/* Hero section - yellow background */}
-      <div
-        style={{
-          backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
-          backgroundAttachment: "fixed",
-          backgroundPosition: "center",
-          backgroundRepeat: "repeat",
-          backgroundSize: "cover",
-          perspective: "5px",
-        }}
-      >
-        <div className="relative">
-          <Section bgColor="bg-transparent">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
-              <div className="flex flex-col justify-center space-y-2">
-                <p className="text-center md:text-left font-montserrat font-extrabold pb-1 text-4xl">
-                  Play Tap Master,
-                  <br />
-                  Enjoy Real Rewards!
-                </p>
+    <div style={yellowBg}>
+      {/* Hero section */}
+      <Section bgColor="bg-transparent">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
+          <div className="flex flex-col justify-center space-y-2">
+            <p className="text-center md:text-left font-montserrat font-extrabold pb-1 text-4xl">
+              Play Tap Master,
+              <br />
+              Enjoy Real Rewards!
+            </p>
 
-                <p className="text-center md:text-left font-montserrat font pb-4 text-xl">
-                  Tap Master is the only game where you can win 50% discount on
-                  your lunch, 10% off your favourite gadgets, 20% rebate
-                  vouchers, and so much more!
-                </p>
+            <p className="text-center md:text-left font-montserrat font pb-4 text-xl">
+              Tap Master is the only game where you can win 50% discount on
+              your lunch, 10% off your favourite gadgets, 20% rebate
+              vouchers, and so much more!
+            </p>
 
-                <Link href="https://tapmaster.engame.tech">
-                  <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                    Play Tap Master Now!
-                  </button>
-                </Link>
-              </div>
+            <Link href="https://tapmaster.engame.tech">
+              <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+                Play Tap Master Now!
+              </button>
+            </Link>
+          </div>
 
-              <div className="flex justify-center items-center">
-                <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-                  <img
-                    src="/assets/images/gamer/EG---Landing-gamer_top-main(D).png"
-                    width={800}
-                    height={800}
-                    alt="home-1"
-                  />
-                </div>
-              </div>
+          <div className="flex justify-center items-center">
+            <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
+              <img
+                src="/assets/images/gamer/EG---Landing-gamer_top-main(D).png"
+                width={800}
+                height={800}
+                alt="home-1"
+              />
             </div>
-          </Section>
+          </div>
         </div>
-      </div>
+      </Section>
 
       {/* "Tired of games..." section - white background */}
       <div className="bg-white">
@@ -127,66 +122,65 @@ export default function ImGamerPage() {
       </div>
 
       {/* "How to join the fun?" section - white background */}
-      <div className="bg-white">
-        <Section>
-          <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
-            <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
-              <div className="max-w-xs md:h-32 md:w-32 flex justify-center rounded-lg overflow-hidden">
-                <img
-                  src="/assets/images/gamer/EG---cat.png"
-                  width={800}
-                  height={800}
-                  alt="EG---cat "
-                />
-              </div>
-
-              <p className="text-center md:text-left font-montserrat font-bold text-4xl">
-                How to join the fun?
-              </p>
-
-              <ul className="w-full text-left font-lato text-xl space-y-0">
-                {[
-                  "Click Play Tap Master Now",
-                  "Start playing & earning points!",
-                  "Redeem your vouchers!",
-                ].map((i, k) => {
-                  const isOdd = k % 2 === 0;
-                  return (
-                    <li
-                      key={`fun-list-${k}`}
-                      className={
-                        " px-4 py-2 rounded-lg" + (isOdd ? " " : " bg-yellow-200")
-                      }
-                    >
-                      {i}
-                    </li>
-                  );
-                })}
-              </ul>
+      <Section bgColor="bg-white">
+        <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
+          <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
+            <div className="max-w-xs md:h-32 md:w-32 flex justify-center rounded-lg overflow-hidden">
+              <img
+                src="/assets/images/gamer/EG---cat.png"
+                width={800}
+                height={800}
+                alt="EG---cat "
+              />
             </div>
 
-            <div
-              style={{
-                backgroundImage:
-                  "url('/assets/images/gamer/EG---Landing-gamer_playgame(D).jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-              className="flex-grow flex justify-center items-center relative h-96 rounded-3xl"
-            >
-              <Link href="https://tapmaster.engame.tech">
-                <button className="absolute bottom-8 w-56 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                  Play Tap Master Now
-                </button>
-              </Link>
-            </div>
+            <p className="text-center md:text-left font-montserrat font-bold text-4xl">
+              How to join the fun?
+            </p>
+
+            <ul className="w-full text-left font-lato text-xl space-y-0">
+              {[
+                "Click Play Tap Master Now",
+                "Start playing & earning points!",
+                "Redeem your vouchers!",
+              ].map((i, k) => {
+                const isOdd = k % 2 === 0;
+                return (
+                  <li
+                    key={`fun-list-${k}`}
+                    className={
+                      " px-4 py-2 rounded-lg" + (isOdd ? " " : " bg-yellow-200")
+                    }
+                  >
+                    {i}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-        </Section>
-      </div>
+
+          <div
+            style={{
+              backgroundImage:
+                "url('/assets/images/gamer/EG---Landing-gamer_playgame(D).jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            className="flex-grow flex justify-center items-center relative h-96 rounded-3xl"
+          >
+            <Link href="https://tapmaster.engame.tech">
+              <button className="absolute bottom-8 w-56 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+                Play Tap Master Now
+              </button>
+            </Link>
+          </div>
+        </div>
+      </Section>
 
       <TrendingGame />
 
-      <div className="bg-white">
+      {/* Hot Vouchers + CTA - white background */}
+      <div className="bg-white pb-1">
         <Section>
           <div className="flex flex-col items-center py-8 space-y-8">
             <p className="text-center font-montserrat font-bold text-3xl">
@@ -294,6 +288,6 @@ export default function ImGamerPage() {
           </div>
         </Section>
       </div>
-    </>
+    </div>
   );
 }

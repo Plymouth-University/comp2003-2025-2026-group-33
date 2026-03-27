@@ -11,50 +11,45 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+const yellowBg = {
+  backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
+  backgroundAttachment: "fixed",
+  backgroundPosition: "center",
+  backgroundRepeat: "repeat",
+  backgroundSize: "cover",
+} as React.CSSProperties;
+
 export default function ImBrandOwnerPage() {
   return (
-    <>
-      {/* Hero section - yellow background */}
-      <div
-        style={{
-          backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
-          backgroundAttachment: "fixed",
-          backgroundPosition: "center",
-          backgroundRepeat: "repeat",
-          backgroundSize: "cover",
-          perspective: "5px",
-        }}
-      >
-        <div className="relative">
-          <Section bgColor="bg-transparent">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
-              <div className="flex flex-col justify-center space-y-2">
-                <p className="text-center md:text-left font-montserrat font-extrabold pb-1 text-4xl">
-                  Gamify Your Business!
-                  <br />
-                  Bring The Sales In!
-                </p>
-                <p className="text-center md:text-left font-montserrat font pb-4 text-xl">
-                  Win over new and repeat customers by placing your brand,
-                  products and offers in our <b>Game to Sales</b> platform that
-                  has all the gamifying tools built in
-                </p>
-              </div>
+    <div style={yellowBg}>
+      {/* Hero section - transparent, shows fixed yellow */}
+      <Section bgColor="bg-transparent">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
+          <div className="flex flex-col justify-center space-y-2">
+            <p className="text-center md:text-left font-montserrat font-extrabold pb-1 text-4xl">
+              Gamify Your Business!
+              <br />
+              Bring The Sales In!
+            </p>
+            <p className="text-center md:text-left font-montserrat font pb-4 text-xl">
+              Win over new and repeat customers by placing your brand,
+              products and offers in our <b>Game to Sales</b> platform that
+              has all the gamifying tools built in
+            </p>
+          </div>
 
-              <div className="flex justify-center items-center">
-                <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-                  <img
-                    src="/assets/images/brand-owner/EG---Landing-brand_top-main(D).png"
-                    width={959}
-                    height={800}
-                    alt="home-1"
-                  />
-                </div>
-              </div>
+          <div className="flex justify-center items-center">
+            <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
+              <img
+                src="/assets/images/brand-owner/EG---Landing-brand_top-main(D).png"
+                width={959}
+                height={800}
+                alt="home-1"
+              />
             </div>
-          </Section>
+          </div>
         </div>
-      </div>
+      </Section>
 
       {/* "How Tap Master Helps" + feature cards - white background */}
       <div className="bg-white">
@@ -80,7 +75,7 @@ export default function ImBrandOwnerPage() {
                 },
                 {
                   title: "Up to 3200% Increased Brand Stickiness!",
-                  desc: "With Tap Master, you will go from a 5 seconds ‘can't wait to skip Youtube ads’ to ‘willingly play a game and look at your brand or products’ for a whooping 180 seconds! This will cause the players to think about your brand much often!",
+                  desc: "With Tap Master, you will go from a 5 seconds 'can't wait to skip Youtube ads' to 'willingly play a game and look at your brand or products' for a whooping 180 seconds! This will cause the players to think about your brand much often!",
                   imageUrl:
                     "/assets/images/brand-owner/EG---Landing-brand_icon-2(D).png",
                 },
@@ -118,10 +113,11 @@ export default function ImBrandOwnerPage() {
         </Section>
       </div>
 
-      {/* "It's as simple as 1-2-3" + voucher steps - white background */}
-      <div className="bg-white">
-        <HowItWork mediaUrl="/assets/videos/1280x800.mp4" />
+      {/* "It's as simple as 1-2-3" - transparent, shows fixed yellow */}
+      <HowItWork mediaUrl="/assets/videos/1280x800.mp4" />
 
+      {/* Voucher upload steps - white background */}
+      <div className="bg-white">
         <Section>
           <div className="grid grid-cols-1 md:grid-cols-3 py-10 gap-10 md:gap-6 xl:gap-20">
             {[
@@ -162,7 +158,6 @@ export default function ImBrandOwnerPage() {
       <SubscribePlan backgroundImage />
 
       <TrustedCompanies />
-    </>
+    </div>
   );
 }
-

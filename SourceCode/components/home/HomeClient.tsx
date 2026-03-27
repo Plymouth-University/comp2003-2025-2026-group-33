@@ -18,30 +18,78 @@ const testimonialImages = [
 
 function TestimonialsCarousel() {
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState<"left" | "right">("right");
+  const [sliding, setSliding] = useState(false);
+  const [next, setNext] = useState(0);
+
+  const goTo = (index: number, dir: "left" | "right") => {
+    if (sliding) return;
+    const target = (index + testimonialImages.length) % testimonialImages.length;
+    setNext(target);
+    setDirection(dir);
+    setSliding(true);
+    setTimeout(() => {
+      setCurrent(target);
+      setSliding(false);
+    }, 400);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonialImages.length);
-    }, 3000);
+      goTo(current + 1, "right");
+    }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [current, sliding]);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-hidden rounded-2xl border-4 border-white">
+      {/* Current slide sliding out */}
       <img
         src={testimonialImages[current]}
         alt="testimonial"
-        className="rounded-2xl border-4 border-white w-full"
+        className="w-full"
+        style={{
+          display: "block",
+          transition: sliding ? "transform 0.4s ease-in-out" : "none",
+          transform: sliding
+            ? direction === "right" ? "translateX(-100%)" : "translateX(100%)"
+            : "translateX(0%)",
+        }}
       />
+      {/* Next slide sliding in */}
+      {sliding && (
+        <img
+          src={testimonialImages[next]}
+          alt="testimonial"
+          className="w-full absolute top-0 left-0"
+          style={{
+            transition: "transform 0.4s ease-in-out",
+            transform: direction === "right" ? "translateX(0%)" : "translateX(0%)",
+            animation: direction === "right"
+              ? "slideInFromRight 0.4s ease-in-out forwards"
+              : "slideInFromLeft 0.4s ease-in-out forwards",
+          }}
+        />
+      )}
+      <style>{`
+        @keyframes slideInFromRight {
+          from { transform: translateX(100%); }
+          to { transform: translateX(0%); }
+        }
+        @keyframes slideInFromLeft {
+          from { transform: translateX(-100%); }
+          to { transform: translateX(0%); }
+        }
+      `}</style>
       <button
-        onClick={() => setCurrent((prev) => (prev - 1 + testimonialImages.length) % testimonialImages.length)}
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow"
+        onClick={() => goTo(current - 1, "left")}
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow z-10"
       >
         &#8249;
       </button>
       <button
-        onClick={() => setCurrent((prev) => (prev + 1) % testimonialImages.length)}
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow"
+        onClick={() => goTo(current + 1, "right")}
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow z-10"
       >
         &#8250;
       </button>
@@ -95,12 +143,7 @@ export default function HomeClient() {
         <TrustedCompanies />
 
         {/* Testimonials */}
-        <div
-          style={{
-            backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
-            backgroundSize: "cover",
-          }}
-        >
+        <div className="bg-transparent">
           <div className="flex flex-col items-center py-10 max-w-6xl mx-auto px-4">
             <p className="text-center font-montserrat font-semibold text-3xl uppercase">
               LET&apos;S HEAR WHAT OUR SUBSCRIBERS HAVE TO SAY
@@ -110,14 +153,7 @@ export default function HomeClient() {
           </div>
         </div>
 
-        <div
-          style={{
-            backgroundImage: "url('/assets/images/backgrounds/EG---bg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-          className="flex justify-center items-end mb-8 md:mb-0 bg-yellow-400 relative"
-        />
+        <div className="bg-transparent h-4" />
         
         <div className="bg-white">
           <div
@@ -257,8 +293,10 @@ export default function HomeClient() {
         {/* WHY TAP MASTER IS THE FUTURE OF MARKETING */}
         <div
           style={{
-            backgroundImage: `url("/assets/images/backgrounds/EG---bg.jpg")`,
+            backgroundImage: "url('/assets/images/backgrounds/EG---bg.jpg')",
+            backgroundAttachment: "scroll",
             backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="flex flex-col items-center pt-10">
@@ -281,8 +319,9 @@ export default function HomeClient() {
           </Section>
 
           <div
+            className="relative"
             style={{
-              backgroundImage: "url('/assets/images/backgrounds/EG---bg-2.jpg')",
+              backgroundImage: "url('/assets/images/backgrounds/EG---bg-3.png')",
               backgroundSize: "cover",
             }}
           >
