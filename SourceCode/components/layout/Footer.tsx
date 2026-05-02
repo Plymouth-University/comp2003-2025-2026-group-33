@@ -49,7 +49,7 @@ export function Footer() {
             <Link href="/pricing" className="hover:underline">
               Pricing
             </Link>
-            <Link href="/for-Business" className="hover:underline">
+            <Link href="/for-business" className="hover:underline">
               For Business
             </Link>
             <Link href="/for-gamers" className="hover:underline">

@@ -22,7 +22,7 @@ export function Navbar({
 
   const navLinks = [
     { href: "/pricing", label: "Pricing" },
-    { href: "/for-Business", label: "For Business" },
+    { href: "/for-business", label: "For Business" },
     { href: "/for-gamers", label: "For Gamers" },
     { href: "/blog", label: "Blog" },
     { href: "/our-story", label: "Our Story" },
