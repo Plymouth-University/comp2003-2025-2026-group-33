@@ -3,7 +3,6 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import { ModalProvider } from "@/context/ModalContext";
 import { AppShell } from "@/components/layout/AppShell";
-import ChatWidget from "@/components/chatbot/ChatWidget";
 
 export const metadata = {
   title: "ENGAME",
@@ -15,10 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="min-h-screen bg-white text-black">
         <ModalProvider>
-          <AppShell>
-            {children}
-            <ChatWidget />
-            </AppShell>
+          <AppShell>{children}</AppShell>
         </ModalProvider>
       </body>
     </html>
